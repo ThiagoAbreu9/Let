@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convite</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="question-container">
+    <h2>Letícia Oliveira<br><br>Quer sair comigo sexta?<br><br>Confirme sua decisão!</h2>
+
+    <button onclick="responder(1)">ÓBVIO!!!</button>
+    
+    <button id="botao-nao-quero-ir" onclick="responder(2)">NÃO QUERO, TÓXICO!!!</button><p id="mensagem-resposta"></p>
+ 
+</div>
+
+<script>
+
+function reposicionarBotao() {
+    var botaoNaoQueroIr = document.getElementById("botao-nao-quero-ir");
+    botaoNaoQueroIr.style.position = "relative";
+
+    var botaoBora = document.querySelector("button:first-of-type"); // Seleciona o primeiro botão, que é o botão "BORA"
+    var botaoBoraRect = botaoBora.getBoundingClientRect();
+
+    var offsetX = Math.floor(Math.random() * 200) - 1000; // Gera um deslocamento aleatório entre -50 e 50 pixels horizontalmente
+    var offsetY = Math.floor(Math.random() * 200) - 300; // Gera um deslocamento aleatório entre -50 e 50 pixels verticalmente
+
+    var novoLeft = botaoBoraRect.left + offsetX;
+    var novoTop = botaoBoraRect.top + offsetY;
+
+    botaoNaoQueroIr.style.left = novoLeft + "px";
+    botaoNaoQueroIr.style.top = novoTop + "px";
+}
+    function responder(opcao) {
+        if (opcao === 1) {
+            window.location.href = "https://imgbox.com/L8n7F4rZ";
+        } else if (opcao === 2) {
+            reposicionarBotao(); // Reposiciona o botão ao ser clicado
+        }
+    }
+</script>
+</body>
+</html>
