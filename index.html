@@ -25,7 +25,7 @@ function reposicionarBotao() {
     var botaoBora = document.querySelector("button:first-of-type"); // Seleciona o primeiro botão, que é o botão "BORA"
     var botaoBoraRect = botaoBora.getBoundingClientRect();
 
-    var offsetX = Math.floor(Math.random() * 200) - 1000; // Gera um deslocamento aleatório entre -50 e 50 pixels horizontalmente
+    var offsetX = Math.floor(Math.random() * 200) - 500; // Gera um deslocamento aleatório entre -50 e 50 pixels horizontalmente
     var offsetY = Math.floor(Math.random() * 200) - 300; // Gera um deslocamento aleatório entre -50 e 50 pixels verticalmente
 
     var novoLeft = botaoBoraRect.left + offsetX;
